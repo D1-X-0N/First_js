@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        
+        /*
+        1. Сначало сложит два числа 10 и 10, получаем 20
+        2. произойдет конкатенация 20 и 10
+        3. получаем "2010"
+        */
+        let result_1 = 10 + 10 + "10";
+        console.log(result_1);
+
+        /*
+        1. произойдет конкатенация 10 и 10
+        2. произойдет конкатенация 1010 и 10
+        */
+        let result_2 = 10 + "10" + 10;
+        console.log(result_2);
+
+        /*
+        1. сложит первые 2 числа, а именно 10 и 10
+        2. +"10" бинарный плюс приведет строку в число
+        3. сложит 2 числа, а именно 20 и 10
+        */
+       let result_3 = 10 + 10 + +"10";
+       console.log(result_3);
+
+       /*
+       1. Сначало -"" станет минус нулем типа number из-за бинарного минуса
+       2. делит 10 на -0
+       3. получаем минус бесконечность
+       */
+      let result_4 = 10 / -"";
+      console.log(result_4);  
+
+      /*
+      1. Сначало бинарный плюс попытается сделать 2,5 числом, но такого числа в js не существует по-этому будет NaN
+      2. 10 делит на NaN
+      3. получаем NaN
+      */
+      let result_5 = 10 / +"2,5";
+      console.log(result_5);
+    </script>
+</body>
+</html>
